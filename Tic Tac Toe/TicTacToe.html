@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleTTT.css">
+    <title>Play Tic Tac Toe</title>
+    <script src = "TTT.js" defer></script>
+    <script src = "MenuPage.js" defer></script>
+</head>
+
+<body>
+    <div id = "menu">
+        <header>
+            <h1>Gamerades</h1>
+        </header>
+        <div id = "modes">
+            <button class = "game-mode">Play Tic Tac Toe</button>
+            <button class = "game-mode">Play Connect 4</button>
+        </div>
+    </div>
+    <div id = "board" style = "display: none">
+        <h1 id = "game-heading"> Tic Tac Toe</h1>
+        <h2 id = "player-heading"> Player 1's Turn</h2>
+        <table>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+        </table>
+        <button id = "restart-button" disabled>Restart Game</button>
+    </div>
+</body>

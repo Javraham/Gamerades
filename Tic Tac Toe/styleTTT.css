@@ -1,0 +1,100 @@
+#menu{
+    margin: auto;
+    width: 50%;
+    height: 500px;
+    background-image: url(menuBG.png);
+    border-radius: 10%;
+    color: white;
+    text-align: center;
+    
+}
+
+header h1{
+    padding-top: 60px;
+    font-size: 70px;
+}
+
+#modes{
+    height : 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#board{
+    margin: auto;
+    text-align: center;
+    background-color: rgb(4, 4, 84);
+    border-radius: 10%;
+    width: 22%;
+    min-height: 450px;
+    color: white;
+    padding-bottom: 15px;
+    
+}
+
+#player-name{
+    text-align: center;
+}
+
+h1{
+    padding-top: 12px;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+h2{
+    margin: 8px;
+}   
+
+button{
+    font-weight: bold;
+    background-color: rgb(61, 3, 61);
+    border-radius: 8px;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+}
+
+.game-square{
+    font-size: 70px;
+    width: 80px;
+    height: 80px;
+}
+
+.game-mode{
+    flex-basis:200px;
+    height: 20%;
+}
+
+button:disabled{
+    pointer-events: none;
+    cursor: default
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+table{
+    margin: auto;
+    border-spacing: 8px;
+    border-radius: 10px;
+}
+
+#restart-button{
+    margin: 15px auto;
+    font-size: 30px;
+    padding: 12px; 
+}
+
+#restart-button:disabled{
+    background-color: grey;
+
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
