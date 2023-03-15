@@ -2,11 +2,10 @@
 const playerHeader = document.getElementById("player-heading");
 const squareButton = document.querySelectorAll('.game-square');
 const restartButton = document.getElementById("restart-button");
+const backButton = document.getElementById('back');
 let currentPlayer = 1;
 let dataset = generateBoard();
 let winningSquares = [];
-
-
 
 squareButton.forEach((item, index) => {
     item.addEventListener('click', () => {
@@ -70,12 +69,17 @@ function changeHeading(){
 }
 
 restartButton.addEventListener('click', restartgame);
+backButton.addEventListener('click', restartgame);
+backButton.addEventListener('click', () => {
+    document.getElementById('board').style.display = 'none';
+    document.getElementById('menu').style.display = 'block';
+})
 
 function endgame(){
     squareButton.forEach((item, index) => {
         item.disabled = true;
         if (winningSquares.includes(index)){
-            item.style.textDecoration = 'underline';
+            item.classList.add('transition');
         }
     })
     restartButton.disabled = false;
@@ -85,7 +89,7 @@ function restartgame(){
     squareButton.forEach(item => {
         item.textContent = '';
         item.disabled = false;
-        item.style.textDecoration = "none";
+        item.classList.remove('transition');
     })
     setPlayerHeading();
     currentPlayer = 1;
