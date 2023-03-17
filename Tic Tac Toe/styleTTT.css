@@ -29,16 +29,16 @@ header h1{
     min-height: 450px;
     color: white;
     padding-bottom: 15px;
-    
 }
 
 h1{
-    font-size: 40px;
+    font-size: 3em;
     margin: 0px;
     padding: 12px;
 }
 
 h2{
+    font-size: 1.8em;
     margin: 8px;
 }   
 
@@ -82,16 +82,24 @@ table{
     font-size: 20px;
     padding: 10px;
     margin-left:10px;
+    position: relative;
+    bottom: 10px;
 }
 
 #restart-button:disabled{
     background-color: grey;
 }
 
-#back{
-    font-size: 20px;
-    padding: 10px;
-    margin-right:10px;
+.back{
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+button img{
+    border-radius: 8px;
 }
 
 img{
@@ -101,13 +109,13 @@ img{
 
 .transition{
     animation-name: scale;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
+    animation-duration: 1.3s;
+    animation-iteration-count: 3;
 }
 
 @keyframes scale {
     50%{
-        transform: scale(0.9)
+        transform: scale(0.93)
     }
 
     100%{

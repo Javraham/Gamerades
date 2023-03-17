@@ -1,0 +1,62 @@
+#cf-page{
+    width: 40vw;
+    height: 80vh;
+    margin: auto;
+    background-color: rgb(4, 4, 84);
+    border-radius: 10%;
+    text-align: center;
+    color: white;
+}
+
+.CF-square{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: white;
+}
+
+.CF-square:hover {
+    cursor: pointer;
+    border: 5px solid red
+}
+
+.CF-square-2:hover{
+    border: 5px solid black;
+}
+
+#cf-restart{
+    font-size: 2.5em;
+    background-color: transparent;
+}
+
+#cf-board{
+    border: 3px solid white;
+    background-color: navy;
+}
+
+#bottom-buttons{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.winning-tran{
+    box-shadow: 0 0 30px gold;
+    border: 5px solid gold;
+    animation-name: toggleColor;
+    animation-duration: 1.3s;
+    animation-iteration-count: 3;
+}
+
+@keyframes toggleColor {
+    50%{
+        transform: scale(0.93);
+    }    
+
+    100%{
+        transform: scale(1);
+    }
+}
