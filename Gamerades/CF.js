@@ -32,6 +32,7 @@ function makeMove(gameSquare, row, col){
         })
     }
     gameSquare.disabled = true;
+    console.log(cfArray);
     cfArray[row][col] = CFcurrentPlayer;
     if(isAWin(row, col)){
         CFPlayerHeader.textContent = `Player ${CFcurrentPlayer} Wins!`
@@ -48,7 +49,7 @@ function makeMove(gameSquare, row, col){
 
 function setPlayerHeading(){
     CFPlayerHeader.textContent = "Player 1's Turn";
-    currentPlayer = 1;
+    CFcurrentPlayer = 1;
 }
 
 function changePlayerHeading(){
@@ -90,13 +91,13 @@ function isAWin(row, col){
     }
     count = 0;
     //up to the Right diagonal check
-    if(rownum == 0){
+    if(row == boardHeight-1){
         j = col;
         i = row;
     }
     else if (col > rownum){
         i = boardHeight - 1;
-        j = col%rownum;
+        j = col-(rownum%col);
     }
     else{
         i = row + col;
@@ -108,7 +109,6 @@ function isAWin(row, col){
             count++;
             if(count === 4){
                 winningSquaresCF.push(i*7+j, (i+1)*7+j-1, (i+2)*7+j-2, (i+3)*7+j-3);
-                console.log(winningSquaresCF);
                 return true;
             }
         }
@@ -126,7 +126,7 @@ function isAWin(row, col){
     }
     else if (col > row){
         i = 0;
-        j = col%row;
+        j = col-(row%col);
     }
     else{
         i = row-col;
@@ -134,11 +134,12 @@ function isAWin(row, col){
     }
 
     while (i < boardHeight && j < boardWidth){
+        console.log(i, j);
         if(cfArray[i][j] === CFcurrentPlayer){
             count++;
+            console.log("count:", count);
             if(count === 4){
                 winningSquaresCF.push(i*7+j, (i-1)*7+j-1, (i-2)*7+j-2, (i-3)*7+j-3);
-                console.log(winningSquaresCF);
                 return true;
             }
         }
