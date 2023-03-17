@@ -2,7 +2,7 @@
 const playerHeader = document.getElementById("player-heading");
 const squareButton = document.querySelectorAll('.game-square');
 const restartButton = document.getElementById("restart-button");
-const backButton = document.getElementById('back');
+const backButton = document.querySelectorAll('.back');
 let currentPlayer = 1;
 let dataset = generateBoard();
 let winningSquares = [];
@@ -69,8 +69,8 @@ function changeHeading(){
 }
 
 restartButton.addEventListener('click', restartgame);
-backButton.addEventListener('click', restartgame);
-backButton.addEventListener('click', () => {
+backButton[0].addEventListener('click', restartgame);
+backButton[0].addEventListener('click', () => {
     document.getElementById('board').style.display = 'none';
     document.getElementById('menu').style.display = 'block';
 })
@@ -100,4 +100,8 @@ function restartgame(){
 
 function generateBoard(){
     return [new Array(3).fill(0),new Array(3).fill(0),new Array(3).fill(0)];
+}
+
+function generateCFBoard(){
+    return [new Array(7).fill(), new Array(7).fill(),new Array(7).fill(),new Array(7).fill(),new Array(7).fill(),new Array(7).fill()]
 }
