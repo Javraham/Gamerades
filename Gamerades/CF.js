@@ -47,7 +47,8 @@ function makeMove(gameSquare, row, col){
     }
 }
 
-function setPlayerHeading(){
+function setPlayerHeading2(){
+    console.log('helo');
     CFPlayerHeader.textContent = "Player 1's Turn";
     CFcurrentPlayer = 1;
 }
@@ -167,7 +168,7 @@ function restart(){
         item.classList.remove('CF-square-2');
         item.classList.remove('winning-tran');
     })
-    setPlayerHeading();
+    setPlayerHeading2();
     cfArray = generateCFBoard();
     rowArray = generateRowArray();
     winningSquaresCF.length = 0;

@@ -60,7 +60,9 @@ function playerWon(gameSquares, row, col){
 }
 
 function setPlayerHeading(){
+    console.log('hello');
     playerHeader.textContent = "Player 1's Turn";
+    currentPlayer = 1;
 }
 
 function changeHeading(){
@@ -92,7 +94,6 @@ function restartgame(){
         item.classList.remove('transition');
     })
     setPlayerHeading();
-    currentPlayer = 1;
     dataset = generateBoard();
     winningSquares = []
     restartButton.disabled = true;

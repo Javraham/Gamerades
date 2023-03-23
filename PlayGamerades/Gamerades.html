@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSS_Files/styleTTT.css">
+    <link rel = "stylesheet" href = "CSS_Files/styleCF.css">
+    <title>Play Gamerades</title>
+    <script src = "JS_Files/Main.js" type = 'module'></script>
+    <script src = "JS_Files/MenuPage.js" type = 'module'></script>
+    <script src = "JS_Files/TTTboard.js" type = 'module'></script>
+</head>
+
+<body>
+    <div id = "menu" style = "display: block;">
+        <header>
+            <h1>Gamerades</h1>
+        </header>
+        <div id = "modes">
+            <button class = "game-mode">Play Tic Tac Toe </button>
+            <button class = "game-mode">Play Connect 4</button>
+        </div>
+    </div>
+    <div id = "board" style = "display: none;">
+        <h1> Tic Tac Toe</h1>
+        <h2 id = "player-heading"> Player 1's Turn</h2>
+        <table>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+            <tr>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+                <td><Button class = "game-square"></Button></td>
+            </tr>
+        </table>
+        <button class = "back"><img src = "Images/back.png"/></button>
+        <button id = "restart-button" disabled>Restart Game</button>
+    </div>
+    <div id = "cf-page" style = "display: none;">
+        <h1>Connect 4</h1>
+        <h2 id = "cf-player-heading">Player 1's Turn</h2>
+        <table id = "cf-board">
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+            <tr>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+                <td><button class = "CF-square"></button></td>
+            </tr>
+        </table>
+        <div id = "bottom-buttons">
+            <button class = "back"><img src = "Images/back.png"/></button>
+            <button id = "cf-restart" disabled>Restart Game</button>
+        </div>
+    </div>
+</body>
